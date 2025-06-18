@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,8 +8,7 @@ const CBOperations = () => {
     <Layout>
       <div className="p-6">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-blue-900">Central Bank Operations</h1>
-          <p className="text-slate-600 mt-2">Link to CB UAE Operations Portal</p>
+          <h1 className="text-3xl font-bold text-stone-800">Central Bank Operations</h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

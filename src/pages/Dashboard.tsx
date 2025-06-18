@@ -1,8 +1,7 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
 
 const Dashboard = () => {
   // Mock data for liquidity management
@@ -32,10 +31,9 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <div className="p-6 space-y-6">
+      <div className="p-6">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-blue-900">Financial Market Dashboard</h1>
-          <p className="text-slate-600 mt-2">Real-time overview of your financial operations</p>
+          <h1 className="text-3xl font-bold text-stone-800">Dashboard</h1>
         </div>
 
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">

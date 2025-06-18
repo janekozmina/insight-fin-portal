@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -18,7 +17,7 @@ const BusinessMonitoring = () => {
     <Layout>
       <div className="p-6">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-blue-900">Business Monitoring</h1>
+          <h1 className="text-3xl font-bold text-stone-800">Business Monitoring</h1>
           <p className="text-slate-600 mt-2">Entry point to detailed Tableau dashboards per participant</p>
         </div>
 

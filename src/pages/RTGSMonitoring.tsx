@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,8 +7,7 @@ const RTGSMonitoring = () => {
     <Layout>
       <div className="p-6">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-blue-900">RTGS Financial Monitoring</h1>
-          <p className="text-slate-600 mt-2">Entry to PSWA (Payment System Web Application)</p>
+          <h1 className="text-3xl font-bold text-stone-800">RTGS Financial Monitoring</h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
