@@ -2,117 +2,150 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { Button } from '@/components/ui/button';
 
 const TechnicalMonitoring = () => {
-  const performanceData = [
-    { time: '00:00', cpu: 45, memory: 62, network: 78 },
-    { time: '04:00', cpu: 38, memory: 58, network: 82 },
-    { time: '08:00', cpu: 72, memory: 85, network: 91 },
-    { time: '12:00', cpu: 86, memory: 78, network: 88 },
-    { time: '16:00', cpu: 91, memory: 82, network: 85 },
-    { time: '20:00', cpu: 67, memory: 71, network: 79 },
+  const services = [
+    {
+      name: 'Access Server',
+      systems: [
+        { id: 'acc1', status: 'UP', color: 'bg-green-600' },
+        { id: 'acc2', status: 'UP', color: 'bg-green-600' }
+      ]
+    },
+    {
+      name: 'APIGW',
+      systems: [
+        { id: 'acc1', status: 'UP', color: 'bg-green-600' },
+        { id: 'acc2', status: 'UP', color: 'bg-green-600' }
+      ]
+    },
+    {
+      name: 'CORE',
+      systems: [
+        { id: 'app1', status: 'DOWN', color: 'bg-red-600' },
+        { id: 'app2', status: 'DOWN', color: 'bg-red-600' }
+      ]
+    },
+    {
+      name: 'PIE',
+      systems: [
+        { id: 'app1', status: 'DOWN', color: 'bg-red-600' },
+        { id: 'app2', status: 'DOWN', color: 'bg-red-600' }
+      ]
+    },
+    {
+      name: 'Governor',
+      systems: [
+        { id: 'app1', status: 'DOWN', color: 'bg-red-600' },
+        { id: 'app2', status: 'UP', color: 'bg-green-600' }
+      ]
+    },
+    {
+      name: 'CAS',
+      systems: [
+        { id: 'app1', status: 'DOWN', color: 'bg-red-600' },
+        { id: 'app2', status: 'DOWN', color: 'bg-red-600' }
+      ]
+    }
+  ];
+
+  const uptimeData = [
+    { service: 'AS Uptime', acc1: '1 week', acc2: '1 week' },
+    { service: 'APIGW Uptime', acc1: '2 weeks', acc2: '2 weeks' },
+    { service: 'CORE Uptime', acc1: '2 days', acc2: '2 days' },
+    { service: 'PIE Uptime', acc1: '2 days', acc2: '2 days' },
+    { service: 'GV Uptime', acc1: '1 day', acc2: '1 day' },
+    { service: 'APIGW Uptime', acc1: '1 day', acc2: '1 day' }
+  ];
+
+  const wenData = [
+    { service: 'WEN', acc1: '2025-06-06\n12:43:37', acc2: '2025-06-06\n12:43:23' },
+    { service: 'WEN', acc1: '2025-06-05\n14:28:56', acc2: '2025-06-05\n14:42:55' },
+    { service: 'WEN', acc1: '2025-06-17\n12:53:48', acc2: '2025-06-17\n12:54:05' },
+    { service: 'WEN', acc1: '2025-06-17\n12:53:37', acc2: '2025-06-17\n12:53:56' },
+    { service: 'WEN', acc1: '2025-06-18\n12:38:08', acc2: '2025-06-18\n12:38:28' },
+    { service: 'WEN', acc1: '2025-06-17\n17:39:35', acc2: '2025-06-17 17:39:31' }
   ];
 
   return (
     <Layout>
       <div className="p-6 bg-gray-900 min-h-full">
-        <div className="mb-6">
-          <h1 className="text-3xl font-bold text-white">Technical Monitoring</h1>
+        <div className="mb-6 flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-white">Technical Monitoring</h1>
+            <p className="text-gray-400 mt-2">System status and uptime monitoring</p>
+          </div>
+          <Button 
+            className="bg-[#B1A496] hover:bg-[#B1A496]/90 text-white"
+          >
+            Control Access Technical Monitoring
+          </Button>
         </div>
 
-        {/* Grafana-style Header */}
-        <div className="bg-gray-800 p-4 rounded-lg mb-6">
-          <div className="flex items-center justify-between">
-            <h2 className="text-white font-semibold">System Performance Dashboard</h2>
-            <div className="flex space-x-2">
-              <select className="bg-gray-700 text-white px-3 py-1 rounded text-sm">
-                <option>Last 1 hour</option>
-                <option>Last 6 hours</option>
-                <option>Last 24 hours</option>
-              </select>
-              <button className="bg-blue-600 text-white px-3 py-1 rounded text-sm">Refresh</button>
-            </div>
-          </div>
-        </div>
-
-        {/* Main Chart Panel */}
-        <div className="bg-gray-800 rounded-lg mb-6">
-          <div className="bg-gray-700 px-4 py-2 rounded-t-lg">
-            <h3 className="text-white font-medium">System Performance Metrics</h3>
-          </div>
-          <div className="p-6">
-            <div className="h-80">
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={performanceData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#374151" />
-                  <XAxis dataKey="time" stroke="#9CA3AF" />
-                  <YAxis stroke="#9CA3AF" />
-                  <Tooltip 
-                    contentStyle={{ 
-                      backgroundColor: '#1F2937', 
-                      border: '1px solid #374151',
-                      borderRadius: '4px',
-                      color: '#F9FAFB'
-                    }} 
-                  />
-                  <Line type="monotone" dataKey="cpu" stroke="#EF4444" name="CPU %" strokeWidth={2} />
-                  <Line type="monotone" dataKey="memory" stroke="#10B981" name="Memory %" strokeWidth={2} />
-                  <Line type="monotone" dataKey="network" stroke="#3B82F6" name="Network %" strokeWidth={2} />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          </div>
-        </div>
-
-        {/* Metric Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <div className="bg-gray-800 rounded-lg">
-            <div className="bg-gray-700 px-4 py-2 rounded-t-lg">
-              <h4 className="text-white text-sm font-medium">CPU Usage</h4>
-            </div>
-            <div className="p-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-red-400">67%</div>
-                <div className="text-xs text-gray-400">Current</div>
+        <div className="grid grid-cols-3 gap-4">
+          {/* Service Status Column */}
+          <div className="space-y-4">
+            {services.map((service, index) => (
+              <div key={index} className="bg-gray-800 rounded border border-gray-700">
+                <div className="bg-gray-700 px-4 py-2 text-white text-sm font-medium border-b border-gray-600">
+                  {service.name}
+                </div>
+                <div className="p-3 grid grid-cols-2 gap-2">
+                  {service.systems.map((system, sysIndex) => (
+                    <div key={sysIndex} className={`${system.color} rounded p-3 text-center`}>
+                      <div className="text-white font-bold text-lg">{system.id} {system.status}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
 
-          <div className="bg-gray-800 rounded-lg">
-            <div className="bg-gray-700 px-4 py-2 rounded-t-lg">
-              <h4 className="text-white text-sm font-medium">Memory Usage</h4>
-            </div>
-            <div className="p-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400">71%</div>
-                <div className="text-xs text-gray-400">Current</div>
+          {/* Uptime Column */}
+          <div className="space-y-4">
+            {uptimeData.map((item, index) => (
+              <div key={index} className="bg-gray-800 rounded border border-gray-700">
+                <div className="bg-gray-700 px-4 py-2 text-white text-sm font-medium border-b border-gray-600">
+                  {item.service}
+                </div>
+                <div className="p-4">
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-gray-400 text-xs mb-1">acc1</div>
+                      <div className="text-green-400 font-bold text-xl">{item.acc1}</div>
+                    </div>
+                    <div>
+                      <div className="text-gray-400 text-xs mb-1">acc2</div>
+                      <div className="text-green-400 font-bold text-xl">{item.acc2}</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
 
-          <div className="bg-gray-800 rounded-lg">
-            <div className="bg-gray-700 px-4 py-2 rounded-t-lg">
-              <h4 className="text-white text-sm font-medium">Network I/O</h4>
-            </div>
-            <div className="p-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400">79%</div>
-                <div className="text-xs text-gray-400">Current</div>
+          {/* WEN Column */}
+          <div className="space-y-4">
+            {wenData.map((item, index) => (
+              <div key={index} className="bg-gray-800 rounded border border-gray-700">
+                <div className="bg-gray-700 px-4 py-2 text-white text-sm font-medium border-b border-gray-600">
+                  {item.service}
+                </div>
+                <div className="p-4">
+                  <div className="grid grid-cols-2 gap-4 text-center">
+                    <div>
+                      <div className="text-gray-400 text-xs mb-1">acc1</div>
+                      <div className="text-green-400 font-mono text-xs whitespace-pre-line">{item.acc1}</div>
+                    </div>
+                    <div>
+                      <div className="text-gray-400 text-xs mb-1">acc2</div>
+                      <div className="text-green-400 font-mono text-xs whitespace-pre-line">{item.acc2}</div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div className="bg-gray-800 rounded-lg">
-            <div className="bg-gray-700 px-4 py-2 rounded-t-lg">
-              <h4 className="text-white text-sm font-medium">Uptime</h4>
-            </div>
-            <div className="p-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">99.9%</div>
-                <div className="text-xs text-gray-400">30 days</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
