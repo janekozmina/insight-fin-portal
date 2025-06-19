@@ -15,7 +15,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   const allMenuItems = [
-    { name: 'Dashboard', path: '/', roles: ['cb', 'participant'] },
+    { name: 'Home', path: '/', roles: ['cb', 'participant'] },
     { name: 'RTGS Configuration', path: '/rtgs-config', roles: ['cb'] },
     { name: 'RTGS Financial Monitoring', path: '/rtgs-monitoring', roles: ['cb'] },
     { name: 'Central Bank Operations', path: '/cb-operations', roles: ['cb'] },
@@ -44,8 +44,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-stone-50 flex">
       {/* Sidebar */}
-      <div className={`${sidebarOpen ? 'w-64' : 'w-16'} transition-all duration-300 flex flex-col`} style={{ backgroundColor: '#B1A496' }}>
-        <div className="p-4 border-b border-[#B1A496]/20">
+      <div className={`${sidebarOpen ? 'w-64' : 'w-16'} transition-all duration-300 flex flex-col bg-gradient-to-br from-[#B1A496] to-[#B1A496]/60`}>
+        <div className="p-4 border-b border-white/20">
           <div className="flex items-center justify-between">
             {sidebarOpen && (
               <h1 className="text-lg font-bold text-white/90">Unified Portal CMA</h1>
@@ -97,7 +97,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <header className="bg-white shadow-sm border-b p-4">
           <div className="flex items-center justify-between">
             <h2 className="text-xl font-semibold text-stone-800">
-              {menuItems.find(item => item.path === location.pathname)?.name || 'Dashboard'}
+              {menuItems.find(item => item.path === location.pathname)?.name || 'Home'}
             </h2>
             <div className="flex items-center space-x-4">
               <span className="text-sm text-stone-600">Welcome, {userInfo.name}</span>

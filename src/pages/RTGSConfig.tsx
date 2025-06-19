@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -13,7 +14,7 @@ const RTGSConfig = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="shadow-lg">
-            <CardHeader className="bg-blue-900 text-white">
+            <CardHeader className="bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 text-white">
               <CardTitle>System Configuration</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
@@ -35,14 +36,12 @@ const RTGSConfig = () => {
           </Card>
 
           <Card className="shadow-lg">
-            <CardHeader className="bg-blue-900 text-white">
+            <CardHeader className="bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 text-white">
               <CardTitle>Database Operations</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="space-y-3">
-                <Button className="w-full bg-blue-900 hover:bg-blue-800">Access DBO Console</Button>
-                <Button variant="outline" className="w-full">View System Logs</Button>
-                <Button variant="outline" className="w-full">Configuration Backup</Button>
+                <Button className="w-full" style={{ backgroundColor: '#B1A496' }}>Access DBO Console</Button>
               </div>
             </CardContent>
           </Card>
