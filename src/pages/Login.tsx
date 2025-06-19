@@ -30,7 +30,7 @@ const Login = () => {
     } else {
       toast({
         title: "Login Failed",
-        description: "Invalid credentials. Use test@test.com",
+        description: "Invalid credentials. Use test@test.com or participant@participant.com",
         variant: "destructive",
       });
     }
@@ -42,10 +42,10 @@ const Login = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
       <Card className="w-full max-w-md shadow-xl border-0 bg-white">
         <CardHeader className="text-center pb-6">
-          <div className="w-16 h-16 bg-gradient-to-r from-amber-800 to-amber-700 rounded-full mx-auto mb-4 flex items-center justify-center">
-            <span className="text-white font-bold text-xl">PP</span>
+          <div className="w-16 h-16 bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span className="text-white font-bold text-xl">UC</span>
           </div>
-          <CardTitle className="text-2xl font-bold text-amber-800">Participants Portal</CardTitle>
+          <CardTitle className="text-2xl font-bold" style={{ color: '#B1A496' }}>Unified Portal CMA</CardTitle>
           <CardDescription className="text-slate-600">
             Secure access to your financial dashboard
           </CardDescription>
@@ -82,7 +82,8 @@ const Login = () => {
             </div>
             <Button 
               type="submit" 
-              className="w-full h-11 bg-amber-800 hover:bg-amber-700 text-white font-medium"
+              className="w-full h-11 text-white font-medium"
+              style={{ backgroundColor: '#B1A496' }}
               disabled={loading}
             >
               {loading ? "Signing In..." : "Sign In"}
@@ -90,7 +91,10 @@ const Login = () => {
           </form>
           <div className="mt-6 text-center">
             <p className="text-xs text-slate-500">
-              Demo credentials: test@test.com / password
+              CB User: test@test.com / CMA!@#$
+            </p>
+            <p className="text-xs text-slate-500">
+              Participant: participant@participant.com / CMA!@#$
             </p>
           </div>
         </CardContent>
