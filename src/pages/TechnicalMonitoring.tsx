@@ -79,7 +79,7 @@ const TechnicalMonitoring = () => {
           <Button 
             className="bg-[#B1A496] hover:bg-[#B1A496]/90 text-white"
           >
-            Control Access Technical Monitoring
+            Access Technical Monitoring
           </Button>
         </div>
 
@@ -94,7 +94,7 @@ const TechnicalMonitoring = () => {
                 <div className="p-3 grid grid-cols-2 gap-2">
                   {service.systems.map((system, sysIndex) => (
                     <div key={sysIndex} className={`${system.color} rounded p-3 text-center`}>
-                      <div className="text-white font-bold text-lg">{system.id} {system.status}</div>
+                      <div className="text-white font-bold text-sm">{system.id} {system.status}</div>
                     </div>
                   ))}
                 </div>
@@ -113,11 +113,11 @@ const TechnicalMonitoring = () => {
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
                       <div className="text-gray-400 text-xs mb-1">acc1</div>
-                      <div className="text-green-400 font-bold text-xl">{item.acc1}</div>
+                      <div className="text-green-400 font-bold text-lg">{item.acc1}</div>
                     </div>
                     <div>
                       <div className="text-gray-400 text-xs mb-1">acc2</div>
-                      <div className="text-green-400 font-bold text-xl">{item.acc2}</div>
+                      <div className="text-green-400 font-bold text-lg">{item.acc2}</div>
                     </div>
                   </div>
                 </div>
