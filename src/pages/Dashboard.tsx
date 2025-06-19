@@ -14,7 +14,7 @@ const Dashboard = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Iframe Placeholder 1 */}
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 text-white">
+            <CardHeader className="bg-[#1E3A8A] text-white">
               <CardTitle className="text-lg">Dashboard Section 1</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
@@ -29,7 +29,7 @@ const Dashboard = () => {
 
           {/* Iframe Placeholder 2 */}
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 text-white">
+            <CardHeader className="bg-[#1E3A8A] text-white">
               <CardTitle className="text-lg">Dashboard Section 2</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
@@ -44,7 +44,7 @@ const Dashboard = () => {
 
           {/* Iframe Placeholder 3 */}
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 text-white">
+            <CardHeader className="bg-[#1E3A8A] text-white">
               <CardTitle className="text-lg">Dashboard Section 3</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
@@ -59,7 +59,7 @@ const Dashboard = () => {
 
           {/* Iframe Placeholder 4 */}
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 text-white">
+            <CardHeader className="bg-[#1E3A8A] text-white">
               <CardTitle className="text-lg">Dashboard Section 4</CardTitle>
             </CardHeader>
             <CardContent className="p-6">

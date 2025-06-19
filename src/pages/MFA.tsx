@@ -41,10 +41,10 @@ const MFA = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 flex items-center justify-center p-4">
       <Card className="w-full max-w-md shadow-xl border-0 bg-white">
         <CardHeader className="text-center pb-6">
-          <div className="w-16 h-16 bg-gradient-to-r from-blue-900 to-blue-800 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <div className="w-16 h-16 bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 rounded-full mx-auto mb-4 flex items-center justify-center">
             <span className="text-white font-bold text-xl">🔐</span>
           </div>
-          <CardTitle className="text-2xl font-bold text-blue-900">Multi-Factor Authentication</CardTitle>
+          <CardTitle className="text-2xl font-bold" style={{ color: '#B1A496' }}>Multi-Factor Authentication</CardTitle>
           <CardDescription className="text-slate-600">
             Enter the 6-digit verification code
           </CardDescription>
@@ -68,7 +68,8 @@ const MFA = () => {
             </div>
             <Button 
               type="submit" 
-              className="w-full h-11 bg-blue-900 hover:bg-blue-800 text-white font-medium"
+              className="w-full h-11 text-white font-medium"
+              style={{ backgroundColor: '#B1A496' }}
               disabled={loading}
             >
               {loading ? "Verifying..." : "Verify"}

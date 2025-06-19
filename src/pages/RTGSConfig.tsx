@@ -14,8 +14,8 @@ const RTGSConfig = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 text-white">
-              <CardTitle>System Configuration</CardTitle>
+            <CardHeader className="bg-[#1E3A8A] text-white">
+              <CardTitle className="text-lg">System Configuration</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="space-y-4">
@@ -36,8 +36,8 @@ const RTGSConfig = () => {
           </Card>
 
           <Card className="shadow-lg">
-            <CardHeader className="bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 text-white">
-              <CardTitle>Database Operations</CardTitle>
+            <CardHeader className="bg-[#1E3A8A] text-white">
+              <CardTitle className="text-lg">Database Operations</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="space-y-3">

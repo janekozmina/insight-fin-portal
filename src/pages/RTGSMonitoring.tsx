@@ -30,66 +30,11 @@ const RTGSMonitoring = () => {
         </div>
 
         <Card className="shadow-lg">
-          <CardHeader className="bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 text-white">
-            <div className="flex items-center justify-between">
-              <CardTitle className="text-lg">Queries</CardTitle>
-              <div className="flex items-center space-x-2">
-                <Button variant="ghost" className="text-white hover:bg-white/10 text-sm">
-                  Add new +
-                </Button>
-                <select className="bg-white/10 border border-white/20 rounded px-2 py-1 text-sm text-white">
-                  <option value="Administrator">Administrator</option>
-                </select>
-              </div>
-            </div>
+          <CardHeader className="bg-[#1E3A8A] text-white">
+            <CardTitle className="text-lg">Queries</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
-            <div className="p-4 bg-gray-50 border-b flex items-center justify-between">
-              <div className="flex items-center space-x-4">
-                <Button variant="ghost" className="text-gray-600 hover:bg-gray-200">
-                  Authorize
-                </Button>
-                <Button variant="ghost" className="text-gray-600 hover:bg-gray-200">
-                  Decline
-                </Button>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Button variant="ghost" size="sm" className="text-gray-600">
-                  ⤢
-                </Button>
-                <Button variant="ghost" size="sm" className="text-gray-600">
-                  ✕
-                </Button>
-                <Button className="bg-blue-500 hover:bg-blue-600 text-white text-sm">
-                  + New widget
-                </Button>
-              </div>
-            </div>
-
             <div className="p-4">
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-medium">Queries (217 records)</h3>
-                <div className="flex items-center space-x-2">
-                  <div className="relative">
-                    <input 
-                      type="text" 
-                      placeholder="Search" 
-                      className="pl-8 pr-4 py-2 border border-gray-300 rounded-md text-sm"
-                    />
-                    <span className="absolute left-2 top-2.5 text-gray-400">🔍</span>
-                  </div>
-                  <Button variant="ghost" size="sm" className="text-gray-600">
-                    ⊞
-                  </Button>
-                  <Button variant="ghost" size="sm" className="text-gray-600">
-                    ☰
-                  </Button>
-                  <Button variant="ghost" size="sm" className="text-gray-600">
-                    ✕
-                  </Button>
-                </div>
-              </div>
-
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
