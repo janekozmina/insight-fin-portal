@@ -8,10 +8,10 @@ const Dashboard = () => {
     <Layout>
       <div className="p-6">
         <div className="mb-6">
-          <h1 className="text-3xl font-bold text-stone-800">Dashboard</h1>
+          <h1 className="text-3xl font-bold text-stone-800">Home</h1>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Iframe Placeholder 1 */}
           <Card className="shadow-lg border-0">
             <CardHeader className="bg-gradient-to-r from-[#B1A496] to-[#B1A496]/80 text-white">
