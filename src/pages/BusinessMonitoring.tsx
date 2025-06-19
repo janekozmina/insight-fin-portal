@@ -1,84 +1,86 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { Button } from '@/components/ui/button';
 
 const BusinessMonitoring = () => {
-  const businessData = [
-    { name: 'Jan', revenue: 4000, transactions: 2400 },
-    { name: 'Feb', revenue: 3000, transactions: 1398 },
-    { name: 'Mar', revenue: 2000, transactions: 9800 },
-    { name: 'Apr', revenue: 2780, transactions: 3908 },
-    { name: 'May', revenue: 1890, transactions: 4800 },
-    { name: 'Jun', revenue: 2390, transactions: 3800 },
-  ];
-
   return (
     <Layout>
       <div className="p-6">
-        <div className="mb-6">
-          <h1 className="text-3xl font-bold text-stone-800">Business Monitoring</h1>
-          <p className="text-slate-600 mt-2">Entry point to detailed Tableau dashboards per participant</p>
+        <div className="mb-6 flex items-center justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-stone-800">Business Monitoring</h1>
+            <p className="text-slate-600 mt-2">Entry point to detailed Tableau dashboards per participant</p>
+          </div>
+          <Button 
+            className="bg-[#B1A496] hover:bg-[#B1A496]/90 text-white"
+          >
+            Access Reporting DataMart
+          </Button>
         </div>
 
-        <div className="grid grid-cols-1 gap-6">
-          <Card className="shadow-lg">
-            <CardHeader className="bg-blue-900 text-white">
-              <CardTitle>Business Performance Analytics</CardTitle>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Dashboard Placeholders */}
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white">
+              <CardTitle className="text-lg">Transaction Analytics Dashboard</CardTitle>
             </CardHeader>
-            <CardContent className="pt-6">
-              <div className="h-80">
-                <ResponsiveContainer width="100%" height="100%">
-                  <BarChart data={businessData}>
-                    <CartesianGrid strokeDasharray="3 3" />
-                    <XAxis dataKey="name" />
-                    <YAxis />
-                    <Tooltip />
-                    <Bar dataKey="revenue" fill="#0ea5e9" name="Revenue ($000)" />
-                    <Bar dataKey="transactions" fill="#64748b" name="Transactions" />
-                  </BarChart>
-                </ResponsiveContainer>
+            <CardContent className="p-6">
+              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <div className="text-4xl mb-2">📊</div>
+                  <p className="text-lg font-medium">Superset Dashboard</p>
+                  <p className="text-sm">Transaction Analytics</p>
+                </div>
               </div>
             </CardContent>
           </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card className="shadow-lg">
-              <CardHeader className="bg-green-700 text-white">
-                <CardTitle>Participant A</CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-green-700">$2.4M</div>
-                  <div className="text-slate-600">Monthly Volume</div>
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white">
+              <CardTitle className="text-lg">Participant Performance Dashboard</CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
+              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <div className="text-4xl mb-2">📈</div>
+                  <p className="text-lg font-medium">Superset Dashboard</p>
+                  <p className="text-sm">Participant Performance</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="shadow-lg">
-              <CardHeader className="bg-orange-600 text-white">
-                <CardTitle>Participant B</CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-orange-600">$1.8M</div>
-                  <div className="text-slate-600">Monthly Volume</div>
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white">
+              <CardTitle className="text-lg">Settlement Monitoring Dashboard</CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
+              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <div className="text-4xl mb-2">🏦</div>
+                  <p className="text-lg font-medium">Superset Dashboard</p>
+                  <p className="text-sm">Settlement Monitoring</p>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </CardContent>
+          </Card>
 
-            <Card className="shadow-lg">
-              <CardHeader className="bg-purple-700 text-white">
-                <CardTitle>Participant C</CardTitle>
-              </CardHeader>
-              <CardContent className="p-6">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-700">$3.1M</div>
-                  <div className="text-slate-600">Monthly Volume</div>
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white">
+              <CardTitle className="text-lg">Risk Analytics Dashboard</CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
+              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
+                <div className="text-center text-gray-500">
+                  <div className="text-4xl mb-2">⚠️</div>
+                  <p className="text-lg font-medium">Superset Dashboard</p>
+                  <p className="text-sm">Risk Analytics</p>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </Layout>

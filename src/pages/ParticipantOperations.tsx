@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -13,27 +14,12 @@ const ParticipantOperations = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="shadow-lg">
-            <CardHeader className="bg-blue-900 text-white">
-              <CardTitle>Account Management</CardTitle>
+            <CardHeader className="bg-[#1E3A8A] text-white">
+              <CardTitle className="text-lg">Participant Access</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="space-y-3">
-                <Button className="w-full bg-blue-900 hover:bg-blue-800">View Accounts</Button>
-                <Button variant="outline" className="w-full">Balance Inquiry</Button>
-                <Button variant="outline" className="w-full">Transaction History</Button>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-lg">
-            <CardHeader className="bg-blue-900 text-white">
-              <CardTitle>Payment Processing</CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="space-y-3">
-                <Button className="w-full bg-blue-900 hover:bg-blue-800">Initiate Payment</Button>
-                <Button variant="outline" className="w-full">Payment Status</Button>
-                <Button variant="outline" className="w-full">Settlement Reports</Button>
+                <Button className="w-full" style={{ backgroundColor: '#B1A496' }}>Access Participants Portal</Button>
               </div>
             </CardContent>
           </Card>
