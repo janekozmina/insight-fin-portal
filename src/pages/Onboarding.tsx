@@ -1,10 +1,17 @@
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 const Onboarding = () => {
+  const navigate = useNavigate();
+
+  const handleAccessOnboardingPortal = () => {
+    navigate('/');
+  };
+
   return (
     <Layout>
       <div className="p-6">
@@ -13,6 +20,7 @@ const Onboarding = () => {
           <Button 
             className="text-white"
             style={{ backgroundColor: '#0F172A' }}
+            onClick={handleAccessOnboardingPortal}
           >
             Access Onboarding Portal
           </Button>

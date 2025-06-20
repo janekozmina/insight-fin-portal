@@ -25,7 +25,7 @@ const ParticipantOperations = () => {
               className="text-white"
               style={{ backgroundColor: '#0F172A' }}
             >
-              Access Knowledge Hub
+              Access Portal
             </Button>
           </div>
 
