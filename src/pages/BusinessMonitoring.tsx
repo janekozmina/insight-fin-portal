@@ -10,11 +10,8 @@ const BusinessMonitoring = () => {
       <div className="p-6">
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">Business Monitoring</h1>
-          <Button 
-            className="text-white"
-            style={{ backgroundColor: '#1E3A8A' }}
-          >
-            Access Reporting DataMart
+          <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+            Access Reporting Configuration
           </Button>
         </div>
 

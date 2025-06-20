@@ -41,7 +41,7 @@ const RTGSConfig = () => {
             </CardHeader>
             <CardContent className="p-6">
               <div className="space-y-3">
-                <Button className="w-full" style={{ backgroundColor: '#B1A496' }}>Access DBO Console</Button>
+                <Button className="w-full">Access RTGS Configuration</Button>
               </div>
             </CardContent>
           </Card>

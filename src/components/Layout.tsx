@@ -19,7 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'RTGS Configuration', path: '/rtgs-config', roles: ['cb'] },
     { name: 'RTGS Financial Monitoring', path: '/rtgs-monitoring', roles: ['cb'] },
     { name: 'Central Bank Operations', path: '/cb-operations', roles: ['cb'] },
-    { name: 'Participants Operation', path: '/participant-operations', roles: ['cb', 'participant'] },
+    { name: 'Participants Operation', path: '/participant-operations', roles: ['participant'] },
     { name: 'Business Monitoring', path: '/business-monitoring', roles: ['cb', 'participant'] },
     { name: 'Technical Monitoring', path: '/technical-monitoring', roles: ['cb'] },
     { name: 'Anomaly Detection', path: '/anomaly-detection', roles: ['cb', 'participant'] },

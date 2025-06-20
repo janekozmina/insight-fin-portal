@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -77,7 +76,7 @@ const TechnicalMonitoring = () => {
             <p className="text-gray-400 mt-2">System status and uptime monitoring</p>
           </div>
           <Button 
-            className="bg-[#B1A496] hover:bg-[#B1A496]/90 text-white"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
           >
             Access Technical Monitoring
           </Button>
