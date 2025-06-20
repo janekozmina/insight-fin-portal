@@ -11,7 +11,7 @@ const CBOperations = () => {
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">Central Bank Operations</h1>
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Access Portal
+            Real-time operations monitoring
           </Button>
         </div>
 
