@@ -24,6 +24,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'Technical Monitoring', path: '/technical-monitoring', roles: ['cb'] },
     { name: 'Anomaly Detection', path: '/anomaly-detection', roles: ['cb', 'participant'] },
     { name: 'Dispute Management', path: '/dispute-management', roles: ['cb', 'participant'] },
+    { name: 'Knowledge Hub', path: '/knowledge-hub', roles: ['cb', 'participant'] },
   ];
 
   const menuItems = allMenuItems.filter(item => 

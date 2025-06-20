@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -14,13 +15,18 @@ const DisputeManagement = () => {
   return (
     <Layout>
       <div className="p-6">
-        <div className="mb-6">
+        <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">Dispute Management</h1>
+          <Button 
+            className="bg-[#B1A496] hover:bg-[#B1A496]/90 text-white"
+          >
+            Access Dispute Portal
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 gap-6">
           <Card className="shadow-lg">
-            <CardHeader className="bg-stone-800 text-white">
+            <CardHeader className="bg-[#1E3A8A] text-white">
               <CardTitle>Active Disputes</CardTitle>
             </CardHeader>
             <CardContent className="p-6">

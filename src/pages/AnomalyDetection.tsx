@@ -99,7 +99,7 @@ const AnomalyDetection = () => {
         </div>
 
         <Card className="shadow-lg">
-          <CardHeader className="bg-blue-900 text-white">
+          <CardHeader className="bg-[#1E3A8A] text-white">
             <CardTitle>Recent Anomalies</CardTitle>
           </CardHeader>
           <CardContent className="p-6">

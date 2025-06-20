@@ -9,10 +9,7 @@ const BusinessMonitoring = () => {
     <Layout>
       <div className="p-6">
         <div className="mb-6 flex items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-stone-800">Business Monitoring</h1>
-            <p className="text-slate-600 mt-2">Entry point to detailed Tableau dashboards per participant</p>
-          </div>
+          <h1 className="text-3xl font-bold text-stone-800">Business Monitoring</h1>
           <Button 
             className="bg-[#B1A496] hover:bg-[#B1A496]/90 text-white"
           >
