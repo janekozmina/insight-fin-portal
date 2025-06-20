@@ -46,14 +46,15 @@ const KnowledgeHub = () => {
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">Knowledge Hub</h1>
           <Button 
-            className="bg-[#B1A496] hover:bg-[#B1A496]/90 text-white"
+            className="text-white"
+            style={{ backgroundColor: '#1E3A8A' }}
           >
             Access Document Management
           </Button>
         </div>
 
         <Card className="shadow-lg">
-          <CardHeader className="bg-[#1E3A8A] text-white">
+          <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
             <CardTitle>Document Management</CardTitle>
           </CardHeader>
           <CardContent className="p-6">

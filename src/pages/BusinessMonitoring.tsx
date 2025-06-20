@@ -11,7 +11,8 @@ const BusinessMonitoring = () => {
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">Business Monitoring</h1>
           <Button 
-            className="bg-[#B1A496] hover:bg-[#B1A496]/90 text-white"
+            className="text-white"
+            style={{ backgroundColor: '#1E3A8A' }}
           >
             Access Reporting DataMart
           </Button>
@@ -20,7 +21,7 @@ const BusinessMonitoring = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Dashboard Placeholders */}
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white">
+            <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
               <CardTitle className="text-lg">Transaction Analytics Dashboard</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
@@ -35,7 +36,7 @@ const BusinessMonitoring = () => {
           </Card>
 
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white">
+            <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
               <CardTitle className="text-lg">Participant Performance Dashboard</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
@@ -50,7 +51,7 @@ const BusinessMonitoring = () => {
           </Card>
 
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white">
+            <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
               <CardTitle className="text-lg">Settlement Monitoring Dashboard</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
@@ -65,7 +66,7 @@ const BusinessMonitoring = () => {
           </Card>
 
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white">
+            <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
               <CardTitle className="text-lg">Risk Analytics Dashboard</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
