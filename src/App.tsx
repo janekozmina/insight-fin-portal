@@ -18,6 +18,7 @@ import BusinessMonitoring from "./pages/BusinessMonitoring";
 import TechnicalMonitoring from "./pages/TechnicalMonitoring";
 import AnomalyDetection from "./pages/AnomalyDetection";
 import DisputeManagement from "./pages/DisputeManagement";
+import KnowledgeHub from "./pages/KnowledgeHub";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -76,6 +77,11 @@ const App: React.FC = () => {
               <Route path="/dispute-management" element={
                 <ProtectedRoute>
                   <DisputeManagement />
+                </ProtectedRoute>
+              } />
+              <Route path="/knowledge-hub" element={
+                <ProtectedRoute>
+                  <KnowledgeHub />
                 </ProtectedRoute>
               } />
               <Route path="*" element={<NotFound />} />
