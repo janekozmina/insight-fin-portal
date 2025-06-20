@@ -79,7 +79,7 @@ const KnowledgeHub = () => {
 
         <Card className="shadow-lg">
           <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
-            <CardTitle>Document Management</CardTitle>
+            <CardTitle className="text-lg">Document Management</CardTitle>
           </CardHeader>
           <CardContent className="p-0">
             <div className="space-y-0">

@@ -8,11 +8,6 @@ const RTGSConfig = () => {
   const configItems = [
     { setting: 'RTGS Status', value: 'Active', type: 'status' },
     { setting: 'Processing Mode', value: 'Real-time', type: 'mode' },
-    { setting: 'Settlement Window', value: '09:00 - 17:00', type: 'text' },
-    { setting: 'Cut-off for Customer Payments', value: '16:30', type: 'text' },
-    { setting: 'Cut-off for Interbank Payments', value: '17:00', type: 'text' },
-    { setting: 'End-of-Day Processing', value: '17:00 - 17:30', type: 'text' },
-    { setting: 'System Backup Schedule', value: '18:00 onwards', type: 'text' },
   ];
 
   return (

@@ -28,7 +28,7 @@ const DisputeManagement = () => {
         <div className="grid grid-cols-1 gap-6">
           <Card className="shadow-lg">
             <CardHeader className="bg-[#1E3A8A] text-white">
-              <CardTitle>Active Disputes</CardTitle>
+              <CardTitle className="text-lg">Active Disputes</CardTitle>
             </CardHeader>
             <CardContent className="p-6">
               <div className="overflow-x-auto">

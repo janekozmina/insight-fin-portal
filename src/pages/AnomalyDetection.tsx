@@ -21,7 +21,7 @@ const AnomalyDetection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="shadow-lg h-96">
             <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
-              <CardTitle>Fraud Detection Dashboard</CardTitle>
+              <CardTitle className="text-lg">Fraud Detection Dashboard</CardTitle>
             </CardHeader>
             <CardContent className="p-6 flex items-center justify-center h-full">
               <div className="text-center text-gray-500">
@@ -34,7 +34,7 @@ const AnomalyDetection = () => {
 
           <Card className="shadow-lg h-96">
             <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
-              <CardTitle>Risk Analytics Dashboard</CardTitle>
+              <CardTitle className="text-lg">Risk Analytics Dashboard</CardTitle>
             </CardHeader>
             <CardContent className="p-6 flex items-center justify-center h-full">
               <div className="text-center text-gray-500">
