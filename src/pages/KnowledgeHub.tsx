@@ -71,9 +71,9 @@ const KnowledgeHub = () => {
           <h1 className="text-3xl font-bold text-stone-800">Knowledge Hub</h1>
           <Button 
             className="text-white"
-            style={{ backgroundColor: '#1E3A8A' }}
+            style={{ backgroundColor: '#0F172A' }}
           >
-            + Add Document
+            Access Knowledge Hub
           </Button>
         </div>
 

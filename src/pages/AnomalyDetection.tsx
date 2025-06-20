@@ -12,7 +12,7 @@ const AnomalyDetection = () => {
           <h1 className="text-3xl font-bold text-stone-800">Anomaly Detection</h1>
           <Button 
             className="text-white"
-            style={{ backgroundColor: '#1E3A8A' }}
+            style={{ backgroundColor: '#0F172A' }}
           >
             Access Fraud Detection
           </Button>
@@ -25,8 +25,9 @@ const AnomalyDetection = () => {
             </CardHeader>
             <CardContent className="p-6 flex items-center justify-center h-full">
               <div className="text-center text-gray-500">
-                <div className="text-6xl mb-4">📊</div>
-                <p>Dashboard content will be loaded here</p>
+                <div className="text-4xl mb-2">📊</div>
+                <p className="text-lg font-medium">Superset Dashboard</p>
+                <p className="text-sm">Fraud Detection Dashboard</p>
               </div>
             </CardContent>
           </Card>
@@ -37,8 +38,9 @@ const AnomalyDetection = () => {
             </CardHeader>
             <CardContent className="p-6 flex items-center justify-center h-full">
               <div className="text-center text-gray-500">
-                <div className="text-6xl mb-4">📈</div>
-                <p>Dashboard content will be loaded here</p>
+                <div className="text-4xl mb-2">📈</div>
+                <p className="text-lg font-medium">Superset Dashboard</p>
+                <p className="text-sm">Risk Analytics Dashboard</p>
               </div>
             </CardContent>
           </Card>

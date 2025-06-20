@@ -18,7 +18,8 @@ const DisputeManagement = () => {
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">Dispute Management</h1>
           <Button 
-            className="bg-[#B1A496] hover:bg-[#B1A496]/90 text-white"
+            className="text-white"
+            style={{ backgroundColor: '#0F172A' }}
           >
             Access Dispute Portal
           </Button>

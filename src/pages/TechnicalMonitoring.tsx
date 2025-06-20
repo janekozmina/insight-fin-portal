@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -69,11 +70,10 @@ const TechnicalMonitoring = () => {
 
   return (
     <Layout>
-      <div className="p-6 bg-gray-900 min-h-full">
+      <div className="p-6 bg-white min-h-full">
         <div className="mb-6 flex items-center justify-between">
           <div>
-            <h1 className="text-3xl font-bold text-white">Technical Monitoring</h1>
-            <p className="text-gray-400 mt-2">System status and uptime monitoring</p>
+            <h1 className="text-3xl font-bold text-stone-800">Technical Monitoring</h1>
           </div>
           <Button 
             className="bg-primary hover:bg-primary/90 text-primary-foreground"
