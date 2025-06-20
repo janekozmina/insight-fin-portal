@@ -4,8 +4,11 @@ import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { useAuth } from '@/contexts/AuthContext';
 
 const DisputeManagement = () => {
+  const { userRole } = useAuth();
+
   const disputes = [
     { id: 1, caseId: 'DISP-2024-001', raisedBy: 'Participant A', against: 'Participant B', amount: 5000, status: 'Open', raisedDate: '2024-01-10' },
     { id: 2, caseId: 'DISP-2024-002', raisedBy: 'Participant C', against: 'Participant A', amount: 2500, status: 'In Review', raisedDate: '2024-01-12' },
@@ -38,9 +41,11 @@ const DisputeManagement = () => {
                       <th className="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                         Case ID
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
-                        Raised By
-                      </th>
+                      {userRole === 'cb' && (
+                        <th className="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
+                          Raised By
+                        </th>
+                      )}
                       <th className="px-6 py-3 text-left text-xs font-medium text-stone-500 uppercase tracking-wider">
                         Against
                       </th>
@@ -61,9 +66,11 @@ const DisputeManagement = () => {
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-stone-900">{dispute.caseId}</div>
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-stone-900">{dispute.raisedBy}</div>
-                        </td>
+                        {userRole === 'cb' && (
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm text-stone-900">{dispute.raisedBy}</div>
+                          </td>
+                        )}
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-stone-900">{dispute.against}</div>
                         </td>

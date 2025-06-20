@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
@@ -22,9 +21,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'Participants Operation', path: '/participant-operations', roles: ['participant'] },
     { name: 'Business Monitoring', path: '/business-monitoring', roles: ['cb', 'participant'] },
     { name: 'Technical Monitoring', path: '/technical-monitoring', roles: ['cb'] },
-    { name: 'Anomaly Detection', path: '/anomaly-detection', roles: ['cb', 'participant'] },
+    { name: 'Anomaly Detection', path: '/anomaly-detection', roles: ['cb'] },
     { name: 'Dispute Management', path: '/dispute-management', roles: ['cb', 'participant'] },
     { name: 'Knowledge Hub', path: '/knowledge-hub', roles: ['cb', 'participant'] },
+    { name: 'Onboarding', path: '/onboarding', roles: ['participant'] },
   ];
 
   const menuItems = allMenuItems.filter(item => 
