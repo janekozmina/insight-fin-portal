@@ -29,8 +29,8 @@ const CBDashboard = () => {
               <CardTitle className="text-sm font-medium">Average Processing Time</CardTitle>
             </CardHeader>
             <CardContent className="p-4">
-              <div className="text-2xl font-bold text-stone-800">8.56s</div>
-              <div className="text-sm text-stone-600">seconds</div>
+              <div className="text-2xl font-bold text-stone-800">8.56 seconds</div>
+              <div className="text-sm text-stone-600">average time</div>
             </CardContent>
           </Card>
 
@@ -62,13 +62,17 @@ const CBDashboard = () => {
             <CardHeader className="bg-[#1E3A8A] text-white py-3">
               <CardTitle className="text-sm font-medium">Money Flow Avg Monthly Top 5 Banks</CardTitle>
             </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-80 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">📊</div>
-                  <p className="text-lg font-medium">Money Flow Dashboard</p>
-                  <p className="text-sm">Average Monthly Top 5 Banks</p>
-                </div>
+            <CardContent className="p-0">
+              <div className="aspect-square">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/6jz4n5xMO9A/?standalone=1&height=100%"
+                  className="w-full h-full"
+                />
               </div>
             </CardContent>
           </Card>
@@ -78,13 +82,17 @@ const CBDashboard = () => {
             <CardHeader className="bg-[#1E3A8A] text-white py-3">
               <CardTitle className="text-sm font-medium">Money Flow Top 5 Banks</CardTitle>
             </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-80 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">📈</div>
-                  <p className="text-lg font-medium">Money Flow Dashboard</p>
-                  <p className="text-sm">Current Top 5 Banks</p>
-                </div>
+            <CardContent className="p-0">
+              <div className="aspect-square">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/ALawzoBnZnB/?standalone=1&height=100%"
+                  className="w-full h-full"
+                />
               </div>
             </CardContent>
           </Card>
