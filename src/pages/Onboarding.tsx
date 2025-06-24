@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Layout from '@/components/Layout';
@@ -9,7 +8,7 @@ const Onboarding = () => {
   const navigate = useNavigate();
 
   const handleAccessOnboardingPortal = () => {
-    navigate('/');
+    window.open('http://ddw.k8s1.cma.se/', '_blank');
   };
 
   return (

@@ -5,8 +5,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '@/components/ui/chart';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import { useAuth } from '@/contexts/AuthContext';
 
 const DisputeManagement = () => {
+  const { userRole } = useAuth();
+
   // Sample data for disputes by type
   const disputeTypeData = [
     { name: 'Unauthorized Transaction', value: 35, color: '#1E3A8A' },
@@ -43,7 +46,7 @@ const DisputeManagement = () => {
               <CardTitle className="text-sm font-medium">Total Open Disputes</CardTitle>
             </CardHeader>
             <CardContent className="p-4">
-              <div className="text-2xl font-bold text-stone-800">126</div>
+              <div className="text-2xl font-bold text-stone-800">{userRole === 'participant' ? '3' : '126'}</div>
               <div className="text-sm text-stone-600">active cases</div>
             </CardContent>
           </Card>
@@ -58,15 +61,18 @@ const DisputeManagement = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white pb-3">
-              <CardTitle className="text-sm font-medium">% Resolved Within SLA</CardTitle>
-            </CardHeader>
-            <CardContent className="p-4">
-              <div className="text-2xl font-bold text-stone-800">87%</div>
-              <div className="text-sm text-green-600">within target</div>
-            </CardContent>
-          </Card>
+          {/* Only show SLA card for CB users */}
+          {userRole !== 'participant' && (
+            <Card className="shadow-lg border-0">
+              <CardHeader className="bg-[#1E3A8A] text-white pb-3">
+                <CardTitle className="text-sm font-medium">% Resolved Within SLA</CardTitle>
+              </CardHeader>
+              <CardContent className="p-4">
+                <div className="text-2xl font-bold text-stone-800">87%</div>
+                <div className="text-sm text-green-600">within target</div>
+              </CardContent>
+            </Card>
+          )}
         </div>
 
         {/* Bottom Section - Disputes by Type Chart */}

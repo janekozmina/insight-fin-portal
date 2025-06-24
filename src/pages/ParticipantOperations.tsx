@@ -9,10 +9,10 @@ const ParticipantOperations = () => {
   const { userRole } = useAuth();
 
   const transactions = [
-    { id: 1, transactionId: 'TXN-2024-001', amount: 50000, status: 'Completed', time: '10 mins ago', type: 'Outbound' },
-    { id: 2, transactionId: 'TXN-2024-002', amount: 25000, status: 'Failed', time: '25 mins ago', type: 'Inbound' },
-    { id: 3, transactionId: 'TXN-2024-003', amount: 75000, status: 'Completed', time: '1 hour ago', type: 'Outbound' },
-    { id: 4, transactionId: 'TXN-2024-004', amount: 100000, status: 'Pending', time: '2 hours ago', type: 'Inbound' },
+    { id: 1, transactionId: 'TXN-2024-001', amount: 450000, status: 'Completed', time: '10 mins ago', type: 'Outbound' },
+    { id: 2, transactionId: 'TXN-2024-002', amount: 425000, status: 'Failed', time: '25 mins ago', type: 'Inbound' },
+    { id: 3, transactionId: 'TXN-2024-003', amount: 575000, status: 'Completed', time: '1 hour ago', type: 'Outbound' },
+    { id: 4, transactionId: 'TXN-2024-004', amount: 600000, status: 'Pending', time: '2 hours ago', type: 'Inbound' },
   ];
 
   if (userRole === 'participant') {
@@ -21,12 +21,18 @@ const ParticipantOperations = () => {
         <div className="p-6">
           <div className="mb-6 flex items-center justify-between">
             <h1 className="text-3xl font-bold text-stone-800">Participant Operations</h1>
-            <Button 
-              className="text-white"
-              style={{ backgroundColor: '#0F172A' }}
+            <a
+              href="https://cbortgsdev1:8885/portal/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Access Portal
-            </Button>
+              <Button 
+                className="text-white"
+                style={{ backgroundColor: '#0F172A' }}
+              >
+                Access Portal
+              </Button>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 gap-6">
@@ -66,7 +72,7 @@ const ParticipantOperations = () => {
                             <div className="text-sm text-stone-900">{transaction.type}</div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
-                            <div className="text-sm text-stone-900">${transaction.amount.toLocaleString()}</div>
+                            <div className="text-sm text-stone-900">{transaction.amount.toLocaleString()} AED</div>
                           </td>
                           <td className="px-6 py-4 whitespace-nowrap">
                             <span className={`px-2 py-1 text-xs rounded-full ${

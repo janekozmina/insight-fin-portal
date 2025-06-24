@@ -20,6 +20,7 @@ import AnomalyDetection from "./pages/AnomalyDetection";
 import DisputeManagement from "./pages/DisputeManagement";
 import KnowledgeHub from "./pages/KnowledgeHub";
 import Onboarding from "./pages/Onboarding";
+import RequestsForCB from "./pages/RequestsForCB";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -88,6 +89,11 @@ const App: React.FC = () => {
               <Route path="/onboarding" element={
                 <ProtectedRoute>
                   <Onboarding />
+                </ProtectedRoute>
+              } />
+              <Route path="/requests-for-cb" element={
+                <ProtectedRoute>
+                  <RequestsForCB />
                 </ProtectedRoute>
               } />
               <Route path="*" element={<NotFound />} />
