@@ -38,8 +38,8 @@ const DisputeManagement = () => {
           </a>
         </div>
 
-        {/* Top Section - Summary KPIs */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+        {/* Top Section - Summary KPIs - Full width for participants */}
+        <div className={`grid ${userRole === 'participant' ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1 lg:grid-cols-3'} gap-6 mb-8`}>
           {/* Total Open Disputes */}
           <Card className="shadow-lg border-0">
             <CardHeader className="bg-[#1E3A8A] text-white pb-3">
