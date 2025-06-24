@@ -11,67 +11,109 @@ const ParticipantDashboard = () => {
           <h1 className="text-3xl font-bold text-stone-800">Participant Dashboard</h1>
         </div>
 
+        {/* Top Section - 6 KPI Cards in 2 rows */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          {/* Row 1 */}
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white pb-3">
+              <CardTitle className="text-sm font-medium">System Net Liquidity</CardTitle>
+            </CardHeader>
+            <CardContent className="p-4">
+              <div className="text-2xl font-bold text-stone-800">98B</div>
+              <div className="text-sm text-stone-600">AED</div>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white pb-3">
+              <CardTitle className="text-sm font-medium">Collateral Limit</CardTitle>
+            </CardHeader>
+            <CardContent className="p-4">
+              <div className="text-2xl font-bold text-stone-800">301M</div>
+              <div className="text-sm text-stone-600">AED</div>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white pb-3">
+              <CardTitle className="text-sm font-medium">Warehoused Payments Count</CardTitle>
+            </CardHeader>
+            <CardContent className="p-4">
+              <div className="text-2xl font-bold text-stone-800">69</div>
+              <div className="text-sm text-stone-600">payments</div>
+            </CardContent>
+          </Card>
+
+          {/* Row 2 */}
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white pb-3">
+              <CardTitle className="text-sm font-medium">Queued Value</CardTitle>
+            </CardHeader>
+            <CardContent className="p-4">
+              <div className="text-2xl font-bold text-stone-800">8.6M</div>
+              <div className="text-sm text-stone-600">AED</div>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white pb-3">
+              <CardTitle className="text-sm font-medium">Overdraft Available</CardTitle>
+            </CardHeader>
+            <CardContent className="p-4">
+              <div className="text-2xl font-bold text-stone-800">13.8M</div>
+              <div className="text-sm text-stone-600">AED</div>
+            </CardContent>
+          </Card>
+
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white pb-3">
+              <CardTitle className="text-sm font-medium">Current Warehoused</CardTitle>
+            </CardHeader>
+            <CardContent className="p-4">
+              <div className="text-2xl font-bold text-stone-800">25.1M</div>
+              <div className="text-sm text-stone-600">AED</div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Bottom Section - 2 Dashboards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Transaction Overview */}
+          {/* Intraday Balance Line */}
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white">
-              <CardTitle className="text-lg">Transaction Overview</CardTitle>
+            <CardHeader className="bg-[#1E3A8A] text-white py-3">
+              <CardTitle className="text-sm font-medium">Intraday Balance Line</CardTitle>
             </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">💳</div>
-                  <p className="text-lg font-medium">Transaction Dashboard</p>
-                  <p className="text-sm">Your transaction analytics</p>
-                </div>
+            <CardContent className="p-0">
+              <div className="aspect-square">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/03DZ0qm5Ojl/?standalone=1&height=100%"
+                  className="w-full h-full"
+                />
               </div>
             </CardContent>
           </Card>
 
-          {/* Account Balance */}
+          {/* Priority of Payments */}
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white">
-              <CardTitle className="text-lg">Account Balance</CardTitle>
+            <CardHeader className="bg-[#1E3A8A] text-white py-3">
+              <CardTitle className="text-sm font-medium">Priority of Payments</CardTitle>
             </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">💰</div>
-                  <p className="text-lg font-medium">Balance Overview</p>
-                  <p className="text-sm">Current account status</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Recent Activities */}
-          <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white">
-              <CardTitle className="text-lg">Recent Activities</CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">📋</div>
-                  <p className="text-lg font-medium">Activity Log</p>
-                  <p className="text-sm">Recent transaction history</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* System Status */}
-          <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white">
-              <CardTitle className="text-lg">System Status</CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">🟢</div>
-                  <p className="text-lg font-medium">System Health</p>
-                  <p className="text-sm">All systems operational</p>
-                </div>
+            <CardContent className="p-0">
+              <div className="aspect-square">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/5dRZoVx3wJ6/?standalone=1&height=100%"
+                  className="w-full h-full"
+                />
               </div>
             </CardContent>
           </Card>
