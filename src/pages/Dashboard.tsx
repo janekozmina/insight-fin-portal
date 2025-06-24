@@ -29,22 +29,13 @@ const Dashboard = () => {
 
           {/* Iframe Placeholder 2 */}
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white">
-              <CardTitle className="text-lg">Dashboard Section 2</CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
 <iframe
-  width="600"
-  height="400"
   seamless
   frameBorder="0"
   scrolling="no"
   src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/6o341el94KV/?standalone=1&height=400"
 >
 </iframe>
-              </div>
-            </CardContent>
           </Card>
 
           {/* Iframe Placeholder 3 */}
