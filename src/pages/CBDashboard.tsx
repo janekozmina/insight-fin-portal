@@ -63,7 +63,7 @@ const CBDashboard = () => {
               <CardTitle className="text-sm font-medium">Money Flow Avg Monthly Top 5 Banks</CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              <div className="aspect-square">
+              <div className="h-96">
                 <iframe
                   width="100%"
                   height="100%"
@@ -71,7 +71,7 @@ const CBDashboard = () => {
                   frameBorder="0"
                   scrolling="no"
                   src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/6jz4n5xMO9A/?standalone=1&height=100%"
-                  className="w-full h-full"
+                  className="w-full h-full rounded-b-lg"
                 />
               </div>
             </CardContent>
@@ -83,7 +83,7 @@ const CBDashboard = () => {
               <CardTitle className="text-sm font-medium">Money Flow Top 5 Banks</CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              <div className="aspect-square">
+              <div className="h-96">
                 <iframe
                   width="100%"
                   height="100%"
@@ -91,7 +91,7 @@ const CBDashboard = () => {
                   frameBorder="0"
                   scrolling="no"
                   src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/ALawzoBnZnB/?standalone=1&height=100%"
-                  className="w-full h-full"
+                  className="w-full h-full rounded-b-lg"
                 />
               </div>
             </CardContent>
