@@ -44,7 +44,14 @@ const RTGSMonitoring = () => {
                   </TableHeader>
                   <TableBody>
                     {businessDayPhases.map((row, index) => (
-                      <TableRow key={index} className="hover:bg-gray-50">
+                      <TableRow 
+                        key={index} 
+                        className={`${
+                          row.phase === 'Normal Settlement Window' 
+                            ? 'bg-yellow-100 hover:bg-yellow-200' 
+                            : 'hover:bg-gray-50'
+                        }`}
+                      >
                         <TableCell className="font-medium">{row.phase}</TableCell>
                         <TableCell className="font-mono text-sm">{row.time}</TableCell>
                       </TableRow>

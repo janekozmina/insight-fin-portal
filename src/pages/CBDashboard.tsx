@@ -11,46 +11,46 @@ const CBDashboard = () => {
           <h1 className="text-3xl font-bold text-stone-800">Central Bank Dashboard</h1>
         </div>
 
-        {/* Top Section - Emulating the screenshot layout */}
+        {/* Top Section - Updated metrics */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
-          {/* Summary Cards */}
+          {/* Total Transaction Today */}
           <Card className="shadow-lg border-0">
             <CardHeader className="bg-[#1E3A8A] text-white pb-3">
-              <CardTitle className="text-sm font-medium">Total Transactions</CardTitle>
+              <CardTitle className="text-sm font-medium">Total Transaction Today</CardTitle>
             </CardHeader>
             <CardContent className="p-4">
-              <div className="text-2xl font-bold text-stone-800">1,247</div>
+              <div className="text-2xl font-bold text-stone-800">109k</div>
               <div className="text-sm text-green-600">+5.2% from yesterday</div>
             </CardContent>
           </Card>
 
           <Card className="shadow-lg border-0">
             <CardHeader className="bg-[#1E3A8A] text-white pb-3">
-              <CardTitle className="text-sm font-medium">Total Volume</CardTitle>
+              <CardTitle className="text-sm font-medium">Average Processing Time</CardTitle>
             </CardHeader>
             <CardContent className="p-4">
-              <div className="text-2xl font-bold text-stone-800">₦2.1B</div>
-              <div className="text-sm text-green-600">+12.8% from yesterday</div>
+              <div className="text-2xl font-bold text-stone-800">8.56s</div>
+              <div className="text-sm text-stone-600">seconds</div>
             </CardContent>
           </Card>
 
           <Card className="shadow-lg border-0">
             <CardHeader className="bg-[#1E3A8A] text-white pb-3">
-              <CardTitle className="text-sm font-medium">Success Rate</CardTitle>
+              <CardTitle className="text-sm font-medium">Average Transaction Value</CardTitle>
             </CardHeader>
             <CardContent className="p-4">
-              <div className="text-2xl font-bold text-stone-800">99.7%</div>
-              <div className="text-sm text-green-600">+0.3% from yesterday</div>
+              <div className="text-2xl font-bold text-stone-800">196k AED</div>
+              <div className="text-sm text-stone-600">per transaction</div>
             </CardContent>
           </Card>
 
           <Card className="shadow-lg border-0">
             <CardHeader className="bg-[#1E3A8A] text-white pb-3">
-              <CardTitle className="text-sm font-medium">Active Banks</CardTitle>
+              <CardTitle className="text-sm font-medium">Processing Delay Share</CardTitle>
             </CardHeader>
             <CardContent className="p-4">
-              <div className="text-2xl font-bold text-stone-800">45</div>
-              <div className="text-sm text-stone-600">2 new this month</div>
+              <div className="text-2xl font-bold text-stone-800">1.1%</div>
+              <div className="text-sm text-stone-600">last hour</div>
             </CardContent>
           </Card>
         </div>
