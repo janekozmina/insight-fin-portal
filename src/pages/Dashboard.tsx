@@ -34,10 +34,15 @@ const Dashboard = () => {
             </CardHeader>
             <CardContent className="p-6">
               <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <p className="text-lg font-medium">Iframe Placeholder 2</p>
-                  <p className="text-sm">Content will be loaded here</p>
-                </div>
+<iframe
+  width="600"
+  height="400"
+  seamless
+  frameBorder="0"
+  scrolling="no"
+  src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/6o341el94KV/?standalone=1&height=400"
+>
+</iframe>
               </div>
             </CardContent>
           </Card>
