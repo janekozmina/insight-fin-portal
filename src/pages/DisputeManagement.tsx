@@ -20,12 +20,18 @@ const DisputeManagement = () => {
       <div className="p-6">
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">Dispute Management</h1>
+          <a
+            href="https://nbm-ips-acc1:8918/portal/view/monitoring/disputesMonitoringList.xhtml"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
           <Button 
             className="text-white"
             style={{ backgroundColor: '#0F172A' }}
           >
             Access Dispute Portal
           </Button>
+          </a>
         </div>
 
         <div className="grid grid-cols-1 gap-6">

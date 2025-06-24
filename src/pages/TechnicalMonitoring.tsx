@@ -1,8 +1,6 @@
-
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 
 const TechnicalMonitoring = () => {
   const services = [
@@ -71,15 +69,8 @@ const TechnicalMonitoring = () => {
   return (
     <Layout>
       <div className="p-6 bg-white min-h-full">
-        <div className="mb-6 flex items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-stone-800">Technical Monitoring</h1>
-          </div>
-          <Button 
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
-          >
-            Access Technical Monitoring
-          </Button>
+        <div className="mb-6">
+          <h1 className="text-3xl font-bold text-stone-800">Technical Monitoring</h1>
         </div>
 
         <div className="grid grid-cols-3 gap-4">

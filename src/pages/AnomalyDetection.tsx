@@ -10,12 +10,18 @@ const AnomalyDetection = () => {
       <div className="p-6">
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">Anomaly Detection</h1>
+          <a
+            href="https://fds-test-ai1:8490/DBOWS/DBOWS?country=US&locale=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
           <Button 
             className="text-white"
             style={{ backgroundColor: '#0F172A' }}
           >
             Access Fraud Detection
           </Button>
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

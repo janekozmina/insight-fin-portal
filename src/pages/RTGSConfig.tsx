@@ -16,7 +16,7 @@ const RTGSConfig = () => {
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">RTGS Configuration</h1>
           <a
-            href="http://SSYS:1@cn-rtgsjo-dev01:5443/oauth-login"
+            href="http://cn-rtgsjo-dev01:5443/oauth-login"
             target="_blank"
             rel="noopener noreferrer"
           >

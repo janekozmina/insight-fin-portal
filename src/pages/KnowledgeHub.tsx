@@ -69,12 +69,18 @@ const KnowledgeHub = () => {
       <div className="p-6">
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">Knowledge Hub</h1>
+          <a
+            href="https://knowledge-hub.fly.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
           <Button 
             className="text-white"
             style={{ backgroundColor: '#0F172A' }}
           >
             Access Knowledge Hub
           </Button>
+          </a>
         </div>
 
         <Card className="shadow-lg">
