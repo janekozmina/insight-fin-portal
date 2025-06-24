@@ -8,7 +8,7 @@ const KnowledgeHub = () => {
   const documents = [
     { 
       id: 1, 
-      name: 'Instruction - Request for Overdraft from portals_062022.docx', 
+      name: 'Instruction TEST - Request for Overdraft from portals_062022.docx', 
       version: 'v4', 
       date: '11.06.2025 15:15',
       author: 'asmimov',
