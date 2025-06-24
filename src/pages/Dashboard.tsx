@@ -30,6 +30,8 @@ const Dashboard = () => {
           {/* Iframe Placeholder 2 */}
           <Card className="shadow-lg border-0">
 <iframe
+  width="100%"
+  height="100%"
   seamless
   frameBorder="0"
   scrolling="no"
