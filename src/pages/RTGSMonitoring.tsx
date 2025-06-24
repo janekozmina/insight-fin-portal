@@ -23,9 +23,15 @@ const RTGSMonitoring = () => {
       <div className="p-6">
         <div className="mb-6 flex items-center justify-between">
           <h1 className="text-3xl font-bold text-stone-800">RTGS Financial Monitoring</h1>
+          <a
+            href="http://cn-rtgsjo-dev01:6443/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
           <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
             Real-time operations monitoring
           </Button>
+          </a>
         </div>
 
         <Card className="shadow-lg">
