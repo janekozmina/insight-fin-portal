@@ -10,9 +10,9 @@ const BusinessMonitoring = () => {
 
   return (
     <Layout>
-      <div className="p-6">
+      <div className="p-6 h-screen flex flex-col">
         <div className="mb-6 flex items-center justify-between">
-          <h1 className="text-3xl font-bold text-stone-800">Business Monitoring</h1>
+          <h1 className="text-3xl font-bold text-stone-800">Warehoused Payments</h1>
           {userRole === 'cb' && (
             <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
               Access Reporting Configuration
@@ -20,64 +20,61 @@ const BusinessMonitoring = () => {
           )}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Dashboard Placeholders */}
+        {/* Main iframe taking 80% of available height */}
+        <div className="flex-1 mb-6" style={{ height: '80%' }}>
+          <Card className="shadow-lg border-0 h-full">
+            <CardContent className="p-0 h-full">
+              <iframe
+                width="100%"
+                height="100%"
+                seamless
+                frameBorder="0"
+                scrolling="no"
+                src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/zrDZxDBpZ95/?standalone=1&height=100%"
+                className="w-full h-full rounded-lg"
+              />
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Bottom Section - Money Flow Dashboards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6" style={{ height: '20%' }}>
+          {/* Money Flow Avg Monthly Top 5 Banks */}
           <Card className="shadow-lg border-0">
-            <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
-              <CardTitle className="text-lg">Transaction Analytics Dashboard</CardTitle>
+            <CardHeader className="bg-[#1E3A8A] text-white py-3">
+              <CardTitle className="text-sm font-medium">Money Flow Avg Monthly Top 5 Banks</CardTitle>
             </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">📊</div>
-                  <p className="text-lg font-medium">Superset Dashboard</p>
-                  <p className="text-sm">Transaction Analytics</p>
-                </div>
+            <CardContent className="p-0">
+              <div className="aspect-square">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/6jz4n5xMO9A/?standalone=1&height=100%"
+                  className="w-full h-full"
+                />
               </div>
             </CardContent>
           </Card>
 
+          {/* Money Flow Top 5 Banks */}
           <Card className="shadow-lg border-0">
-            <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
-              <CardTitle className="text-lg">Participant Performance Dashboard</CardTitle>
+            <CardHeader className="bg-[#1E3A8A] text-white py-3">
+              <CardTitle className="text-sm font-medium">Money Flow Top 5 Banks</CardTitle>
             </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">📈</div>
-                  <p className="text-lg font-medium">Superset Dashboard</p>
-                  <p className="text-sm">Participant Performance</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-lg border-0">
-            <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
-              <CardTitle className="text-lg">Settlement Monitoring Dashboard</CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">🏦</div>
-                  <p className="text-lg font-medium">Superset Dashboard</p>
-                  <p className="text-sm">Settlement Monitoring</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-lg border-0">
-            <CardHeader style={{ backgroundColor: '#1E3A8A' }} className="text-white">
-              <CardTitle className="text-lg">Risk Analytics Dashboard</CardTitle>
-            </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">⚠️</div>
-                  <p className="text-lg font-medium">Superset Dashboard</p>
-                  <p className="text-sm">Risk Analytics</p>
-                </div>
+            <CardContent className="p-0">
+              <div className="aspect-square">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/ALawzoBnZnB/?standalone=1&height=100%"
+                  className="w-full h-full"
+                />
               </div>
             </CardContent>
           </Card>
