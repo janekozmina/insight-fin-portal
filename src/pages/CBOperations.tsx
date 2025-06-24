@@ -15,18 +15,44 @@ const CBOperations = () => {
           </Button>
         </div>
 
-        <div className="grid grid-cols-1 gap-6">
+        {/* Bottom Section - Operational Dashboards */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Collateral Monitoring */}
           <Card className="shadow-lg border-0">
-            <CardHeader className="bg-[#1E3A8A] text-white">
-              <CardTitle className="text-lg">Central Bank Operations Dashboard</CardTitle>
+            <CardHeader className="bg-[#1E3A8A] text-white py-3">
+              <CardTitle className="text-sm font-medium">Collateral Monitoring</CardTitle>
             </CardHeader>
-            <CardContent className="p-6">
-              <div className="h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center">
-                <div className="text-center text-gray-500">
-                  <div className="text-4xl mb-2">📊</div>
-                  <p className="text-lg font-medium">Superset Dashboard</p>
-                  <p className="text-sm">Central Bank Operations</p>
-                </div>
+            <CardContent className="p-0">
+              <div className="aspect-square">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/Rmy4NAP2OKg/?standalone=1&height=100%"
+                  className="w-full h-full"
+                />
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Cross-Border Flow Today */}
+          <Card className="shadow-lg border-0">
+            <CardHeader className="bg-[#1E3A8A] text-white py-3">
+              <CardTitle className="text-sm font-medium">Cross-Border Flow Today</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <div className="aspect-square">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  seamless
+                  frameBorder="0"
+                  scrolling="no"
+                  src="http://superset.k8s1.moscow.cma.ru/superset/explore/p/v7AZeP8lwRz/?standalone=1&height=100%"
+                  className="w-full h-full"
+                />
               </div>
             </CardContent>
           </Card>

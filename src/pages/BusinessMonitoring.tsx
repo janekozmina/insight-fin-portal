@@ -12,17 +12,26 @@ const BusinessMonitoring = () => {
     <Layout>
       <div className="p-6 h-screen flex flex-col">
         <div className="mb-6 flex items-center justify-between">
-          <h1 className="text-3xl font-bold text-stone-800">Warehoused Payments</h1>
+          <h1 className="text-3xl font-bold text-stone-800">Business Monitoring</h1>
           {userRole === 'cb' && (
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              Access Reporting Configuration
-            </Button>
+            <a
+              href="http://superset.k8s1.moscow.cma.ru/superset/dashboard/p/JnOlGOxZlj0/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                Access Reporting Configuration
+              </Button>
+            </a>
           )}
         </div>
 
         {/* Main iframe taking 80% of available height */}
         <div className="flex-1 mb-6" style={{ height: '80%' }}>
           <Card className="shadow-lg border-0 h-full">
+            <CardHeader className="bg-[#1E3A8A] text-white py-3">
+              <CardTitle className="text-sm font-medium">Warehoused Payments</CardTitle>
+            </CardHeader>
             <CardContent className="p-0 h-full">
               <iframe
                 width="100%"
